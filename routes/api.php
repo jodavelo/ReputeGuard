@@ -27,4 +27,5 @@ Route::prefix('v1')->group(function(){
     Route::post('/decrypt', 'CryptoController@decrypt');
     Route::get('/auth/{userId}', [LoginController::class, 'getAuth']);
     Route::post('/login', [LoginController::class, 'login']);
+    Route::get('/get-ips-small-detail-list', [ChartController::class, 'findAllIpsDetail']);
 });
