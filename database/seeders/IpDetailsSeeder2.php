@@ -16,7 +16,8 @@ class IpDetailsSeeder2 extends Seeder
     public function run()
     {
         // Buscar la IP en la tabla ips
-        $ip = Ip::where('address', '102.130.113.9')->first();
+        // $ip = Ip::where('address', '102.130.113.9')->first();
+        $ip = Ip::create(['address' => '102.130.113.9']);
 
         if ($ip) {
             IpDetail::create([
